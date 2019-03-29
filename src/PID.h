@@ -31,14 +31,15 @@ class PID {
    */
   double TotalError();
 
- private:
+  void SpeedUpdateError(double speed_error);
+private:
   /**
    * PID Errors
    */
   double p_error;
   double i_error;
   double d_error;
-
+  double d_prev_error;
   /**
    * PID Coefficients
    */ 
